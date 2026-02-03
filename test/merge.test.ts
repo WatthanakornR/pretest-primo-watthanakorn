@@ -9,4 +9,12 @@ describe('merge function', () => {
     expect(result).toEqual([0, 1, 2, 3, 4, 5, 6, 7, 9]);
   });
 
+    test('should handle empty arrays', () => {
+        const col1: number[] = [];
+        const col2: number[] = [];
+        const col3: number[] = [];
+        const result = merge(col1, col2, col3);
+    expect(result).toEqual([]); 
+  });
+
 });
