@@ -25,4 +25,12 @@ describe('merge function', () => {
     expect(result).toEqual([-4, -3, -2, -1, 0, 1, 2, 3, 4]);
     });
 
+    test('should handle duplicates', () => {
+        const col1 = [1, 1, 2];
+        const col2 = [2, 3];
+        const col3 = [1];
+
+    expect(merge(col1, col2, col3)).toEqual([1, 1, 1, 2, 2, 3]);
+    });
+
 });
