@@ -16,5 +16,13 @@ describe('merge function', () => {
         const result = merge(col1, col2, col3);
     expect(result).toEqual([]); 
   });
+  
+    test('should handle arrays with negative numbers', () => {
+        const col1 = [-3, -1, 2];
+        const col2 = [-2, 0, 4];
+        const col3 = [1, -4, 3];
+        const result = merge(col1, col2, col3);
+    expect(result).toEqual([-4, -3, -2, -1, 0, 1, 2, 3, 4]);
+    });
 
 });
