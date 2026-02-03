@@ -33,4 +33,12 @@ describe('merge function', () => {
     expect(merge(col1, col2, col3)).toEqual([1, 1, 1, 2, 2, 3]);
     });
 
+    test('should handle arrays of different lengths', () => {
+        const col1 = [1, 4];
+        const col2 = [2, 3, 5, 6];
+        const col3 = [8, 7];
+        const result = merge(col1, col2, col3);
+    expect(result).toEqual([1, 2, 3, 4, 5, 6, 7, 8]);
+    });
+
 });
